@@ -1,7 +1,7 @@
 #pragma once
 class Vector
 {
-private:
+public:
 	float x, y, z;
 
 
