@@ -14,7 +14,7 @@ public:
 	float AngleOf(const Vector& vectorX, const Vector& vectorY); // return radian
 	float RadianToDegree(float Angle);
 	float DegreeToRadian(float Angle);
-	Vector Rotate(Vector vector, float DegreeInRadians);
+	Vector Rotate(Vector VectorA, float DegreeInRadians, bool Clockwise);
 	Vector CrossProduct(Vector& vectorA, Vector& vectorB);
 	
 	

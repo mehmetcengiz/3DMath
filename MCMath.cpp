@@ -33,10 +33,14 @@ float MCMath::DegreeToRadian(float Angle){
 	return (Angle * M_PI) / 180;
 }
 
-Vector MCMath::Rotate(Vector vector, float DegreeInRadians){//Turn to 3D Vector
+Vector MCMath::Rotate(Vector VectorA, float DegreeInRadians, bool Clockwise){//Turn to 3D Vector
 	
-	float xVal = vector.x * cos((double)(DegreeInRadians)) - vector.y * sin((double)(DegreeInRadians));
-	float yVal = vector.x * sin((double)(DegreeInRadians)) + vector.y * cos((double)(DegreeInRadians));
+	if (Clockwise) {
+		DegreeInRadians = 2 * M_PI - DegreeInRadians;
+	}
+
+	float xVal = VectorA.x * cos((double)(DegreeInRadians)) - VectorA.y * sin((double)(DegreeInRadians));
+	float yVal = VectorA.x * sin((double)(DegreeInRadians)) + VectorA.y * cos((double)(DegreeInRadians));
 	
 	return Vector(xVal,yVal,0);
 }
@@ -44,7 +48,7 @@ Vector MCMath::Rotate(Vector vector, float DegreeInRadians){//Turn to 3D Vector
 Vector MCMath::CrossProduct(Vector& vectorA, Vector& vectorB){
 	
 	float xVal = (vectorA.y * vectorB.z) - (vectorA.z * vectorB.y);
-	float yVal = (vectorA.x * vectorB.z) - (vectorA.z * vectorB.x);
+	float yVal = (vectorA.z * vectorB.x) - (vectorA.x * vectorB.z);
 	float zVal = (vectorA.x * vectorB.y) - (vectorA.y * vectorB.x);
 	
 	return Vector(xVal,yVal,zVal);
