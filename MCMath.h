@@ -10,8 +10,9 @@ public:
 	float DistanceTo(const Vector& vectorX,const Vector& vectorY);
 	float Square(float Value);
 	float SquareRoot(float Value);
-	//float DotProduct(const Vector& vectorX, const Vector& vectorY);
-	//float AngleOf(const Vector& vectorX, const Vector& vectorY);
+	float DotProduct(const Vector& vectorX, const Vector& vectorY);
+	float AngleOfInRadius(const Vector& vectorX, const Vector& vectorY);
+	float AngleOfInDegrees(const Vector& vectorX, const Vector& vectorY);
 	
 
 };
