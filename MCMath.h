@@ -11,8 +11,12 @@ public:
 	float Square(float Value);
 	float SquareRoot(float Value);
 	float DotProduct(const Vector& vectorX, const Vector& vectorY);
-	float AngleOfInRadius(const Vector& vectorX, const Vector& vectorY);
-	float AngleOfInDegrees(const Vector& vectorX, const Vector& vectorY);
+	float AngleOf(const Vector& vectorX, const Vector& vectorY); // return radian
+	float RadianToDegree(float Angle);
+	float DegreeToRadian(float Angle);
+	Vector Rotate(Vector vector, float DegreeInRadians);
+	Vector CrossProduct(Vector& vectorA, Vector& vectorB);
+	
 	
 
 };
