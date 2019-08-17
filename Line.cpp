@@ -4,8 +4,14 @@
 Line::Line(Vector _pointA, Vector _pointB, LineType LineType){
 	PointA = _pointA;
 	PointB = _pointB;
-	Vec = _pointB.Substract(_pointA);
+	VecV = _pointB.Substract(_pointA);
 	TypeOfLine = LineType;
+}
+
+Line::Line(Vector _pointA, Vector _vecV){
+	PointA = _pointA;
+	PointB = _pointA + _vecV;
+	VecV = _vecV;
 }
 
 Vector Line::GetPointAt(float T){
@@ -19,9 +25,9 @@ Vector Line::GetPointAt(float T){
 	}
 
 
-	float xVal = PointA.x + (Vec.x * T);
-	float yVal = PointA.y + (Vec.y * T);
-	float zVal = PointA.z + (Vec.z * T);
+	float xVal = PointA.x + (VecV.x * T);
+	float yVal = PointA.y + (VecV.y * T);
+	float zVal = PointA.z + (VecV.z * T);
 
 	return Vector(xVal,yVal,zVal);
 }

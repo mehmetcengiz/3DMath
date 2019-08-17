@@ -9,11 +9,11 @@ Plane::Plane(Vector _point1, Vector _point2, Vector _point3) {
 	VecU = _point3 - _point1;
 }
 
-Plane::Plane(Vector _point1, Vector _vecV, Vector _vecU) {
-	Point1 = _point1;
-	VecV = _vecV;
-	VecU = _vecU;
-}
+//Plane::Plane(Vector _point1, Vector _vecV, Vector _vecU) {
+//	Point1 = _point1;
+//	VecV = _vecV;
+//	VecU = _vecU;
+//}
 
 
 Vector Plane::Lerp(float s, float t) {

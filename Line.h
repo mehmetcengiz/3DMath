@@ -14,11 +14,12 @@ public:
 
 	Vector PointA;
 	Vector PointB;
-	Vector Vec;
+	Vector VecV;
 
 	LineType TypeOfLine;
 
 	Line(Vector _pointA, Vector _pointB, LineType _lineType);
+	Line(Vector _pointA, Vector _vecV);
 	Vector  GetPointAt(float T);
 
 };
