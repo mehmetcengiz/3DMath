@@ -16,7 +16,7 @@ public:
 	float DegreeToRadian(float Angle);
 	Vector Rotate(Vector VectorA, float DegreeInRadians, bool Clockwise);
 	Vector CrossProduct(Vector& vectorA, Vector& vectorB);
-	
+	Vector Lerp(Vector Start, Vector End, float Alpha);
 	
 
 };
