@@ -15,24 +15,24 @@ Vector::~Vector(){
 
 }
 
-Vector Vector::Add(Vector& Other){
+Vector Vector::Add(const Vector& Other) const{
 	return Vector(x + Other.x, y + Other.y, z + Other.z);
 }
-Vector Vector::Substract(Vector& Other) {
+Vector Vector::Substract(const Vector& Other) const {
 	return Vector(x - Other.x, y - Other.y, z - Other.z);
 }
 
-Vector Vector::Multiply(Vector& Other) {
+Vector Vector::Multiply(const Vector& Other) const {
 	return Vector(x * Other.x, y * Other.y, z * Other.z);
 }
-Vector Vector::Multiply(float Value) {
+Vector Vector::Multiply(const float Value) const {
 	return Vector(x * Value, y * Value, z * Value);
 }
-Vector Vector::Divide(Vector& Other) {
+Vector Vector::Divide(const Vector& Other) const {
 	return Vector(x / Other.x, y / Other.y, z / Other.z);
 }
 
-Vector Vector::Divide(float Value) {
+Vector Vector::Divide(const float Value) const {
 	if (Value == 0) {
 		return Vector(0, 0, 0);
 	}

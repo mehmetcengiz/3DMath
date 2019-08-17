@@ -56,6 +56,9 @@ Vector MCMath::CrossProduct(Vector& vectorA, Vector& vectorB){
 
 Vector MCMath::Lerp(Vector Start, Vector End, float Alpha){
 	
+	Alpha = Alpha >= 1 ? 1 : Alpha;
+	Alpha = Alpha <= 0 ? 0 : Alpha;
+
 	Vector Direction = Start.Substract(End);
 	float xt = Start.x + Direction.x * Alpha;
 	float yt = Start.y + Direction.y * Alpha;
