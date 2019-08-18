@@ -8,6 +8,7 @@ public:
 public:
 	Vector();
 	Vector(float x, float y, float z);
+	Vector(float x, float y);
 	~Vector();
 	Vector Add(const Vector& Other) const;
 	Vector Substract(const Vector& Other) const;
@@ -27,6 +28,10 @@ public:
 	Vector operator*(const float Value) const {
 		return Multiply(Value);
 	}
+
+	Vector Get2DPerp() const {
+		return Vector(-y, x);
+	}	
 
 };
 

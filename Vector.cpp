@@ -10,6 +10,12 @@ Vector::Vector(float x, float y, float z) {
 	Vector::z = z;
 }
 
+Vector::Vector(float x, float y) {
+	Vector::x = x;
+	Vector::y = y;
+	Vector::z = -1;
+}
+
 
 Vector::~Vector(){
 

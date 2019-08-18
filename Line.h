@@ -21,6 +21,7 @@ public:
 	Line(Vector _pointA, Vector _pointB, LineType _lineType);
 	Line(Vector _pointA, Vector _vecV);
 	Vector  GetPointAt(float T);
+	float IntersectsAt(Line l);
 
 };
 

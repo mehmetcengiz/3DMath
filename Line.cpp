@@ -1,5 +1,5 @@
 #include "Line.h"
-#include <algorithm>
+#include "MCMath.h"
 
 Line::Line(Vector _pointA, Vector _pointB, LineType LineType){
 	PointA = _pointA;
@@ -30,4 +30,16 @@ Vector Line::GetPointAt(float T){
 	float zVal = PointA.z + (VecV.z * T);
 
 	return Vector(xVal,yVal,zVal);
+}
+
+float Line::IntersectsAt(Line l){
+	//Checking if lines are paralel.
+	if (MCMath::DotProduct(l.VecV.Get2DPerp(), VecV) == 0.0f) {
+		return NAN;
+	}
+
+	//Returning time value of intersected point of line.
+	Vector C = l.PointA - PointA;
+	float t = MCMath::DotProduct(l.VecV.Get2DPerp(), C) / MCMath::DotProduct(l.VecV.Get2DPerp(), VecV);
+	return t;
 }
