@@ -51,7 +51,7 @@ float Vector::Lenght() const{
 	return MCMath::DistanceTo(Vector(x, y, z), Vector(0, 0, 0));
 }
 
-Vector Vector::Normalized() const {
+Vector Vector::GetNormalizedVector() const {
 	float l = Lenght();
 	return Vector(x / l, y / l, z / l);
 }

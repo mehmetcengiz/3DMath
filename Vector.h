@@ -33,12 +33,8 @@ public:
 		return Vector(-y, x);
 	}	
 
-	Vector GetNormalizedVector() const {
-		
-		return Vector()
-	}
+	Vector GetNormalizedVector() const ;
 
 	float Lenght() const;
-	Vector Normalized() const;
 };
 

@@ -61,3 +61,18 @@ float Line::IntersectsAt(Plane p){
 	float t =  MCMath::DotProduct(Normal, (p.Point1 - PointA)) / MCMath::DotProduct(Normal, VecV);
 	return t;
 }
+
+Vector Line::GetReflectedVector(Vector Normal){
+	//r  =  a - 2(a.n).n
+	Vector norm = Normal.GetNormalizedVector();
+	Vector vNorm = VecV.GetNormalizedVector();
+	float d = MCMath::DotProduct(norm, vNorm);
+	
+	if (d == 0.f) {
+		return VecV;
+	}
+
+	float vn2 = d * 2;
+	Vector r = vNorm - norm * vn2;
+	return r;
+}

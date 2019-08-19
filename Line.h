@@ -25,6 +25,7 @@ public:
 	Vector  GetPointAt(float T);
 	float IntersectsAt(Line l);
 	float IntersectsAt(Plane l);
+	Vector GetReflectedVector(Vector Normal);
 
 };
 
