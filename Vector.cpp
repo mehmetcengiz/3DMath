@@ -1,4 +1,6 @@
 #include "Vector.h"
+#include "MCMath.h"
+#include <math.h>
 
 Vector::Vector() 
 	:x(0) , y(0) ,z(0){
@@ -43,4 +45,13 @@ Vector Vector::Divide(const float Value) const {
 		return Vector(0, 0, 0);
 	}
 	return Vector(x / Value, y / Value, z / Value);
+}
+
+float Vector::Lenght() const{
+	return MCMath::DistanceTo(Vector(x, y, z), Vector(0, 0, 0));
+}
+
+Vector Vector::Normalized() const {
+	float l = Lenght();
+	return Vector(x / l, y / l, z / l);
 }
