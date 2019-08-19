@@ -12,6 +12,7 @@ Line::Line(Vector _pointA, Vector _vecV){
 	PointA = _pointA;
 	PointB = _pointA + _vecV;
 	VecV = _vecV;
+	TypeOfLine = LineType::SEGMENT;
 }
 
 Vector Line::GetPointAt(float T){
@@ -41,5 +42,10 @@ float Line::IntersectsAt(Line l){
 	//Returning time value of intersected point of line.
 	Vector C = l.PointA - PointA;
 	float t = MCMath::DotProduct(l.VecV.Get2DPerp(), C) / MCMath::DotProduct(l.VecV.Get2DPerp(), VecV);
+
+	if ((t < 0 || t>1) && (TypeOfLine == LineType::SEGMENT)) {
+		return NAN;
+	}
+
 	return t;
 }
