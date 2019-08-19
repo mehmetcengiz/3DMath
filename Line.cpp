@@ -1,5 +1,6 @@
 #include "Line.h"
 #include "MCMath.h"
+#include "Plane.h"
 
 Line::Line(Vector _pointA, Vector _pointB, LineType LineType){
 	PointA = _pointA;
@@ -47,5 +48,16 @@ float Line::IntersectsAt(Line l){
 		return NAN;
 	}
 
+	return t;
+}
+
+float Line::IntersectsAt(Plane p){
+	Vector Normal = MCMath::CrossProduct(p.VecV, p.VecU);
+
+	if (MCMath::DotProduct(Normal, VecV) == 0.0f) {
+		return NAN;
+	}
+
+	float t =  MCMath::DotProduct(Normal, (p.Point1 - PointA)) / MCMath::DotProduct(Normal, VecV);
 	return t;
 }
