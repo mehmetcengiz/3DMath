@@ -1,7 +1,6 @@
 #pragma once
 
 #include "Vector.h"
-#include <math.h>
 
 class MCMath{
 public:

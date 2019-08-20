@@ -1,4 +1,5 @@
 #include "MCMath.h"
+#include <math.h>
 # define M_PI 3.141592653f
 
 float MCMath::DistanceTo(const Vector& vectorA, const Vector& vectorB){
