@@ -1,6 +1,7 @@
 #include "Line.h"
 #include "MCMath.h"
 #include "Plane.h"
+#include <math.h>
 
 Line::Line(Vector _pointA, Vector _pointB, LineType LineType){
 	PointA = _pointA;
