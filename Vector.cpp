@@ -30,9 +30,6 @@ Vector Vector::Substract(const Vector& Other) const {
 	return Vector(x - Other.x, y - Other.y, z - Other.z);
 }
 
-Vector Vector::Multiply(const Vector& Other) const {
-	return Vector(x * Other.x, y * Other.y, z * Other.z);
-}
 Vector Vector::Multiply(const float Value) const {
 	return Vector(x * Value, y * Value, z * Value);
 }
@@ -41,9 +38,6 @@ Vector Vector::Divide(const Vector& Other) const {
 }
 
 Vector Vector::Divide(const float Value) const {
-	if (Value == 0) {
-		return Vector(0, 0, 0);
-	}
 	return Vector(x / Value, y / Value, z / Value);
 }
 

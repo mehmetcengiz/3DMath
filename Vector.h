@@ -10,9 +10,10 @@ public:
 	Vector(float x, float y, float z);
 	Vector(float x, float y);
 	~Vector();
+	Vector GetNormalizedVector() const ;
+	float Lenght() const;
 	Vector Add(const Vector& Other) const;
 	Vector Substract(const Vector& Other) const;
-	Vector Multiply(const Vector& Other) const;
 	Vector Multiply(const float Value) const;
 	Vector Divide(const Vector& Other) const;
 	Vector Divide(const float Value) const;
@@ -33,8 +34,5 @@ public:
 		return Vector(-y, x);
 	}	
 
-	Vector GetNormalizedVector() const ;
-
-	float Lenght() const;
 };
 
