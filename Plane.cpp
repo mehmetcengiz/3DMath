@@ -16,7 +16,7 @@ Plane::Plane(Vector _point1, Vector _point2, Vector _point3) {
 //}
 
 
-Vector Plane::Lerp(float s, float t) {
+Vector Plane::GetPointAt(float s, float t) {
 
 	float xst = Point1.x + VecU.x * s + VecV.x * t;
 	float yst = Point1.y + VecU.y * s + VecV.y * t;
