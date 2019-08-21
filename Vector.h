@@ -15,7 +15,6 @@ public:
 	Vector Add(const Vector& Other) const;
 	Vector Substract(const Vector& Other) const;
 	Vector Multiply(const float Value) const;
-	Vector Divide(const Vector& Other) const;
 	Vector Divide(const float Value) const;
 	
 	Vector operator+(const Vector& Other) const {
