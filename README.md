@@ -14,9 +14,9 @@ __DegreeToRadian-__ Returns Radian value of given Degree.
 
 
 ## Vector.cpp Functions
-__GetNormalizedVector-__ Returns normalized value of this vector.
-__Lenght-__ Returns Lenght of this vector.
-__Add-__ Returns Sum of this vector to other vector
-__Substrac-__ Returns Substraction of this with other.
-__Multiply-__ Returns Multiplication of this with other.
-__Divide-__ Returns division of this with other.
+__GetNormalizedVector-__ Returns normalized value of this vector.  
+__Lenght-__ Returns Lenght of this vector.  
+__Add-__ Returns Sum of this vector to other vector.  
+__Substrac-__ Returns Substraction of this with other.  
+__Multiply-__ Returns Multiplication of this with other.  
+__Divide-__ Returns division of this with other.  
