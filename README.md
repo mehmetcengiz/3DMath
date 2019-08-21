@@ -20,3 +20,12 @@ __Add-__ Returns Sum of this vector to other vector.
 __Substrac-__ Returns Substraction of this with other.  
 __Multiply-__ Returns Multiplication of this with other.  
 __Divide-__ Returns division of this with other.  
+
+## Line.cpp Functions
+__GetPointAt-__ Returns a point on the line by given T value. (T = 0.5, Point: Middle of Line)  
+__IntersectsAt(Line)-__ Returns intersected T value of given Line.  
+__IntersectsAt(Plane)-__ Returns intersected T value of given Plane.  
+__GetReflectedVector-__  Returns reflected vector by given Normal.
+
+## Plane.cpp Functions
+__GetPointAt__ Returns a point on the plane by given T and S values (T = 0.5,S = 0.5, Point: Middle of Plane.)
