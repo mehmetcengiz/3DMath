@@ -34,6 +34,8 @@ float MCMath::DegreeToRadian(float Angle){
 	return (Angle * M_PI) / 180;
 }
 
+
+
 Vector MCMath::Rotate(Vector VectorA, float DegreeInRadians, bool Clockwise){//Turn to 3D Vector
 	
 	if (Clockwise) {
@@ -67,6 +69,26 @@ Vector MCMath::Lerp(Vector Start, Vector End, float Alpha){
 
 	return Vector(xt, yt, zt);
 }
+
+Vector MCMath::Translate(Vector position, Vector vector) {
+	//Implement matrix formula of Translation.
+	return Vector();
+}
+
+Vector MCMath::Scale(Vector ScaleAmount){
+	//Implement matrix formula of Scale.
+	return Vector();
+}
+
+Vector MCMath::Rotate(Vector position, float angleX, bool clockWiseX, float angleY, bool clockWiseY, float angleZ, bool clockWiseZ){
+	//Implement matrix rotate formula.
+	return Vector();
+}
+
+
+
+
+
 
 
 

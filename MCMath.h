@@ -16,7 +16,9 @@ public:
 	static float SquareRoot(float Value);
 	static float RadianToDegree(float Angle);
 	static float DegreeToRadian(float Angle);
-	
+	static Vector Translate(Vector position, Vector vector);
+	static Vector Scale(Vector ScaleAmount);
+	static Vector Rotate(Vector position, float angleX, bool clockWiseX,float angleY,bool clockWiseY, float angleZ,bool clockWiseZ);
 
 };
 
